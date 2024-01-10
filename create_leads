@@ -1,0 +1,3 @@
+leadInfo = {"Company":"zoho","Last_Name":"developer","Phone":"8725995626","Email":"test@gmail.com","Fax":"1234","Website":"xyz.com","Lead_Status":"Attempted to Contact","Country":"USA","No_of_Employees":"10","Skype_ID":"john_doe@gmail.com","Secondary_Email":"hmadaan@gmail.com","Twitter":"hmadaan","Street":"xyz","State":"california","City":"chicago","Zip_Code":"160071","Description":"xyz","Mobile":"123456789","Lead_Source":"zyz","Industry":"IT","Annual_Revenue":"$1,000.00","Email_Opt_Out":"false"};
+create_record = zoho.crm.createRecord("Leads",leadInfo);
+info create_record;
