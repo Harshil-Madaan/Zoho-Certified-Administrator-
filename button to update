@@ -1,0 +1,10 @@
+selected_contact = contacts.toList("|||");
+for each  contact_id in selected_contact
+{
+	update_map = Map();
+	update_map.put("Title","Updated");
+	update_contact = zoho.crm.updateRecord("Contacts",contact_id,update_map);
+	info update_contact;
+}
+return "Data successfully updated";
+
