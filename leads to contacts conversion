@@ -1,0 +1,31 @@
+get_lead_details = zoho.crm.getRecordById("Leads",Leadid);
+if(get_lead_details != null)
+{
+	get_Last_Name = get_lead_details.get("Last_Name");
+	get_first_Name = get_lead_details.get("First_Name");
+	get_email = get_lead_details.get("Email");
+	get_phone = get_lead_details.get("Phone");
+	get_company = get_lead_details.get("Company");
+	lead_status = get_lead_details.get("Status");
+	if(lead_status == "Attempted to Contact")
+	{
+		mp = Map();
+		mp.put("Last_Name",get_Last_Name);
+		mp.put("First_Name",get_first_Name);
+		mp.put("Email",get_email);
+		mp.put("Mobile",get_phone);
+		mp.put("Company",get_company);
+		response = zoho.crm.convertLead(Leadid);
+		info response;
+		resp1 = response.get("Contacts");
+		info resp1;
+	}
+	else
+	{
+		info "Lead status is not 'Attempted to Contact'. Skipping conversion.";
+	}
+}
+else
+{
+	info "Lead record not found";
+}
