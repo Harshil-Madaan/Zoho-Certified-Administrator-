@@ -1,0 +1,13 @@
+subformRows = list();
+subform = Map();
+subform.put("itemname","mobile");
+subform.put("quantity",10);
+subform.put("price",20);
+subform.put("description","android");
+subformRows.add(subform);
+mp = Map();
+mp.put("Lead_Name","developer");
+mp.put("Last_Name","developer");
+mp.put("items",subformRows);
+createRec = zoho.crm.createRecord("Leads",mp);
+info createRec;
